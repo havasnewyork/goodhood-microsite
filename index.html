@@ -4,15 +4,92 @@
 <meta charset="UTF-8">
 <title>GoodHood - Hoodies for the homeless</title>
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Bungee+Shade|Bungee">
+<link rel="stylesheet" type="text/css" href="css/goodhood.css" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.pagepiling.js"></script>
 <style >
-body{
-	font-family: 'Bungee Shade', cursive;
-}
 
 </style>
+
+<script type="text/javascript">
+	var deleteLog = false;
+
+	$(document).ready(function() {
+		$('#pagepiling').pagepiling({
+			menu: '#menu',
+			anchors: ['home','auction', 'whenandwhere', 'sponcers', 'about'],
+			sectionsColor: ['#ecece3','#e000e3', '#2ebe21', '#2C3E50', '#51bec4', '#2C3E50'],
+			loopTop: false,
+			loopBottom: false
+		});
+	});
+</script>
 </head>
 
 <body>
-Good Hood Microsite
+
+
+
+
+<ul id="menu">
+	<li class="logo" data-menuanchor="home" class="active"><a href="#home"><img src="images/Hoodies_for_the_Homeless_logo.svg" alt="Hoodies for the Homeless" /></a>
+    
+    <li data-menuanchor="auction"><a href="#auction">Auction</a></li>
+    <li data-menuanchor="whenandwhere"><a href="#whenandwhere">When and where</a></li>
+    <li data-menuanchor="sponcers"><a href="#sponcers">sponcers</a></li>
+    <li data-menuanchor="about"><a href="#about">about</a></li>
+    <li class="rsvp"><a href="" target="_blank">RSVP</a></li>
+</ul>
+
+
+<div id="pagepiling">
+    <div class="section" id="section1">
+        <div class="col intro">
+        	<h3 class="bungee">Feb. 8th, 2017  /  7-10pm</h3>
+            <h1>party with a purpose</h1>
+            <p class="bungee">Hoodies for the Homeless is proud to present a night of fashion, art & music.</p>
+        </div>
+        <div class="col art"><li data-menuanchor="sponcers"><a href="#sponcers">sponcers</a></li></div>
+        
+    </div>
+    <div class="section" id="section2">
+        <div class="col intro">
+        
+        	
+            <h1>Art auction</h1>
+            <p class="bungee">Copy</p>
+        </div>
+        <div class="col art"></div>
+        
+    </div>
+    <div class="section" id="section3">
+        <div class="col intro">
+            <h1>When and where</h1>
+            <p>Go to the first section and scroll up or to the last one and scroll down to see how it works.</p>
+        </div>
+        <div class="col art"></div>
+        
+    </div>
+    <div class="section" id="section4">
+        <div class="col intro">
+            <h1>Sponcers</h1>
+            <p>And it will loop to the first section</p>
+        </div>
+        <div class="col art"></div>
+    </div>
+    <div class="section" id="section5">
+        <div class="col intro">
+            <h1>About</h1>
+            <p>And it will loop to the first section</p>
+        </div>
+        <div class="col art"></div>
+    </div>
+</div>
+
+
+
+
+
 </body>
 </html>
